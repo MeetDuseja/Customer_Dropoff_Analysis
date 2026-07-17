@@ -479,25 +479,6 @@ Phase 3 (Full Production)
 → Agent performance tracking
 → A/B testing framework integration
 ```
-
----
-
-## 🎥 Demo Video Walkthrough
-
-The video demonstrates:
-
-1. **Homepage** — Two clear options with device selector
-2. **Live Form** — Filling the loan application with intentional Android OTP failures
-3. **Leave Form** — Showing how partial data gets captured
-4. **Overview Dashboard** — Health score, KPIs, trends
-5. **Funnel Analysis** — Where the biggest drop is
-6. **Pattern Analysis** — Root cause investigation
-7. **Actionable Insights** — What business should do
-8. **A/B Simulator** — Interactive revenue projection
-9. **Live Predictor** — Real-time risk scoring
-
----
-
 ## 👤 Developer
 
 **Developed by:** Meet Duseja
