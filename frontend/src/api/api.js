@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE = 'http://localhost:8000/api'
+const BASE = 'https://customer-dropoff-analysis.vercel.app/'
 const api = axios.create({ baseURL: BASE })
 
 export const getOverview       = (days = 0) => api.get(`/overview?days=${days}`)
