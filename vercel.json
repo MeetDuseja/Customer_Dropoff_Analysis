@@ -1,36 +1,23 @@
 {
-    "services": {
-        "frontend": {
-            "root": "frontend",
-            "framework": "vite"
-        },
-        "backend": {
-            "root": "backend"
-        }
+  "services": {
+    "app-frontend": {
+      "root": "frontend",
+      "framework": "vite"
     },
-    "functions": {
-        "backend/main.py": {
-        "runtime": "vercel-python@0.1.0"
-        }
+    "app-backend": {
+      "root": "backend",
+      "entrypoint": "main.py",
+      "framework": "fastapi"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": { "service": "app-backend" }
     },
-    "rewrites": [
-        { "source": "/api/(.*)", "destination": "backend/main.py" }
-    ],
-    "rewrites": [
-        {
-            "source": "/api(/.*)?",
-            "destination": {
-                "type": "service",
-                "service": "backend"
-            }
-        },
-        {
-            "source": "/(.*)",
-            "destination": {
-                "type": "service",
-                "service": "frontend"
-            }
-        }
-    ]
+    {
+      "source": "/(.*)",
+      "destination": { "service": "app-frontend" }
+    }
+  ]
 }
-
